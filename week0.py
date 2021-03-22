@@ -33,3 +33,10 @@ second = 3, 14
 print(type(first))
 print(type(second))
 
+name = input("Jak masz na imię? ")
+print(f"Cześć, {name}, miło cię poznać!")
+
+quantity = int(input("ilość: "))
+price = float(input("Cena"))
+amount = quantity * price
+print(f"Do zapłaty {amount}")
