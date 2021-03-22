@@ -2,7 +2,7 @@
 # celsjusze na faranheity
 # wzór ( T(F) = (T(C) * 9/5 +32))
 
-celsius = float(input("podaj temperaturę w stopniach Celsjuszach"))
+celsius = float(input("podaj temperaturę w stopniach Celsjusza"))
 fahrenheits = (celsius * (9/5)) + 32
 print(f"Po przeliczeniu na Fahrenheit'y temperatura wynosi:{fahrenheits: .2f} stopni \n")
 
