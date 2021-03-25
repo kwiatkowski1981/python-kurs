@@ -36,7 +36,6 @@ c_x = int(input(f'{axis_point} x trzeciego {top}'))
 c_y = int(input(f'{axis_point} y trzeciego {top} '))
 print('\n')
 
-
 print(f'a_x = {a_x}')
 print(f'a_y = {a_y}')
 
