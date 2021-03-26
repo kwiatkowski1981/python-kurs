@@ -34,9 +34,9 @@ used_liquid = bottles_number * filling_quantity
 remaining_liquid = amount_of_liquid - used_liquid
 liquid_for_employee = remaining_liquid
 
-print(f"Ilosc cieczy do rozlania to: {amount_of_liquid}l")
+print(f"Ilość cieczy do rozlania to: {amount_of_liquid}l")
 print(f"Do każdej butelki zostanie wlane {filling_quantity_output}l cieczy")
 print(f"do rozlania {amount_of_liquid}l cieczy będą potrzebne {bottles_number} butelki")
 print(f"ilość zużytej cieczy to: {used_liquid:.2f}l")
 print(f"pozostała ciecz to: {remaining_liquid:.2f}l.")
-print(f"Pracownik może zabrać ze sobą {liquid_for_employee:.2f}l plynu")
+print(f"Pracownik może zabrać ze sobą {liquid_for_employee:.2f}l płynu")
