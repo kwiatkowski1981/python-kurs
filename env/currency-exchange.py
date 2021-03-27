@@ -1,4 +1,4 @@
-import sys
+from sys import exit
 
 # Prepare two variables, containing the buying rate and the USD selling rate. As of today,
 # this is the purchase of 3.8507, the sale of 3.9285.
@@ -14,63 +14,75 @@ import sys
 
 purchase = 3.8507
 sale = 3.9285
-pln = "Pln"
-usd = "Usd"
+pln = "PLN"
+usd = "USD"
+
+
+def get_number(prompt="wybierz ilość środków do wymiany: ", err_msg="tylko liczby", parse=int):
+    while True:
+        try:
+            out = parse(input(prompt))
+        except ValueError:
+            print(err_msg)
+        else:
+            return out
 
 
 def ask_for_amount():
-    funds_amount = int(input("wybierz ilość środków do wymiany"))
-    # print(f"przed retun {funds_amount}")
+    funds_amount = get_number()
     return funds_amount
 
 
-def usd_to_pln(funds_amount):
-    gained_founds = funds_amount * sale
-    return print(f"{funds_amount}(USD) zamieniono na: {gained_founds}(PLN).")
-
-
-def pln_to_usd(funds_amount):
+def sell_usd(funds_amount):
+    if funds_amount < 1:
+        return print(f"Za mało środków do sprzedaży: {funds_amount}({usd})")
     gained_founds = funds_amount * purchase
-    return print(f"{funds_amount}(PLN) zamieniono na: {gained_founds}(USD).")
+    return print(f"za: {funds_amount}({usd}) | otrzymano: {gained_founds:.2f}({pln}).")
+
+
+def buy_usd(funds_amount):
+    gained_founds = funds_amount * sale
+    return print(f"Za: {funds_amount}({usd}) | proszę przygotować do zapłaty: {gained_founds:.2f}({pln}).")
 
 
 def menu_1():
-    print(f"Wybrano wymianę USD na PLN")
-    usd_to_pln(ask_for_amount())
-    return sys.exit(1)
+    print(f"Wybrano sprzedaż {usd}")
+    sell_usd(ask_for_amount())
+    return exit(1)
 
 
 def menu_2():
-    print(f"Wybrano wymianę PLN na USD")
-    pln_to_usd(ask_for_amount())
-    return sys.exit(1)
+    print(f"Wybrano kupno {usd}")
+    buy_usd(ask_for_amount())
+    return exit(1)
 
 
 def menu_4():
-    return sys.exit(1)
+    return exit(1)
 
 
 def error():
     print(f"nie ma takiej opcji")
-    return sys.exit(1)
+    return exit(1)
 
 
 def menu_0(argument):
     switcher = {
         1: menu_1,
         2: menu_2,
-        # 3: wroc do menu,
-        4: menu_4,
+        3: menu_4,
+        # 4: wroc do menu,
     }
     func = switcher.get(argument, lambda: error())
     return func()
 
 
 def main_menu():
+    print("BILONU NIE PRZYJMUJEMY")
     print("Witam w kantorze")
     print("Dostępne opcje to:")
-    print(f"1: Wymiana {usd} na {pln}")
-    print(f"2: Wymiana {pln} na {usd}")
+    print(f"1: Sprzedaj {usd}")
+    print(f"2: Kup {usd}")
     print("3: Zakończ")
     print("wybierz opcję:")
     menu_0(int(input()))
