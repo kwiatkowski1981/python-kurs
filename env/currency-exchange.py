@@ -7,7 +7,7 @@ pln = "PLN"
 usd = "USD"
 
 
-def get_number(err_msg="tylko liczby", parse=int):
+def get_number(err_msg="tylko liczby całkowite", parse=int):
     while True:
         try:
             out = parse(input())
