@@ -1,3 +1,4 @@
+
 word_list = {
     'czerwony': 'rot',
     'zielony': 'grün',
@@ -11,8 +12,9 @@ word_list = {
     'brązowy': 'braun'
 }
 
-word=input('Wpisz szukane słowo: ')
+
+word = input('Wpisz szukane słowo: ')
 if word in word_list:
-    print(f'{word} to: {word_list[word]}')
-if word in word_list.values():
-    print(f'{word_list[word]} ')
+    print(f'{word} to: {word_list[word]}')       # todo else
+
+
