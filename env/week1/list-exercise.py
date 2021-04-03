@@ -21,10 +21,13 @@ print('\n')
 names = ['tomek', 'ola', 'agata', 'kuba', 'zosia', 'marysia', 'karol', 'oliver', 'matylda', 'bronislaw']
 print(names)
 
-print(min(names))   # alfabetycznie pierwsze
-print(max(names))   # alfabetycznie ostatnie
-print(min(names, key=len))      # najkrotsze
-print(max(names, key=len))      # najdluzsze
+if not names:
+    print(f"w liście '{names}' nie ma jeszcze żadnych inmion")
+else:
+    print(min(names))   # alfabetycznie pierwsze
+    print(max(names))   # alfabetycznie ostatnie
+    print(min(names, key=len))      # najkrotsze
+    print(max(names, key=len))      # najdluzsze
 print('\n')
 
 num = int(input('podaj liczbe: '))
@@ -44,4 +47,9 @@ if num > 1:
 else:
     print(num, "is not a prime number")
 
+print('\n')
+
+books = ['frunky furbo', 'magiczny kod', 'kryształy czasu']
+for number, book in enumerate(reversed(books), start=1):        # mozna uzyc sorted
+    print(number, book)
 
