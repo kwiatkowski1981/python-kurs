@@ -62,7 +62,7 @@ print(f"{names2_strings}")
 
 # names2_strings.
 # print(names2_strings)
-
+print('\n')
 
 num = int(input('podaj liczbe: '))
 print(num)
