@@ -1,38 +1,33 @@
 from collections import Counter
 
 
-# name = input('podaj imie: ')
-# greetings = "Dzien dobry"
-#
-# if name == 'kuba':
-#     print(f"{greetings} panie {name}")
-# elif name[-1:] == 'a':
-#     print(f"{greetings} pani {name}")
-# else:
-#     print(f"{greetings} panie {name}")
-#
-#
-# password = input('podaj hasło do zaszyfrowania: ')
-# new_password = password.replace('a', '@')
-# new_password = new_password.replace('s', '$')
-# print(new_password)
+name = input('podaj imie: ')
+greetings = "Dzien dobry"
+
+if name == 'kuba':
+    print(f"{greetings} panie {name}")
+elif name[-1:] == 'a':
+    print(f"{greetings} pani {name}")
+else:
+    print(f"{greetings} panie {name}")
+
+
+password = input('podaj hasło do zaszyfrowania: ')
+new_password = password.replace('a', '@')
+new_password = new_password.replace('s', '$')
+print(new_password)
 
 
 sentence = "Pies to najlepszy przyjaciel człowieka, lecz nie każdy pies o tym wie."
 print(sentence)
 sentence_lower = sentence.lower()
-print(sentence_lower.find('pies'))
-# for id, sent in enumerate(sentence_lower):
-#     print(id, sent, end=' ')
+# print(sentence_lower.find('pies'))
 print(sentence_lower)
-
-
 sentence_lower.count("pies")
 words = sentence_lower.split()
 print(words)
 wordCount = Counter(words)
 print(f" tyle ==> {wordCount}")
-# print(f"ilosc najczesciej powtarzanych {wordCount}")
 
 for word3, id in sorted(wordCount.items(), key=lambda item: item[1], reverse=True):
     print(word3, id, sep=" | ")
