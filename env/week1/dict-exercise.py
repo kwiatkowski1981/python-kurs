@@ -18,3 +18,5 @@ if word in word_list:
     print(f'{word} to: {word_list[word]}')       # todo else
 
 
+for word in word_list.items():
+    print(f"{word[0]}: {word[1]}")
