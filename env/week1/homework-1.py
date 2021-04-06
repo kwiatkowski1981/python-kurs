@@ -18,7 +18,6 @@ print('\n')
 
 for item in counts.items():
     print(f"2) ==> : {item[0]} = {item[1]}")
-print(type(item))
 print('\n')
 
 for input_word, id in sorted(counts.items(), key=lambda item: item[1], reverse=True):
