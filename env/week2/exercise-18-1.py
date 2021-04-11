@@ -1,5 +1,5 @@
 
-people =[
+peoples =[
     ('janusz', 'typowy', 'polska', 'pies', 'kot', 'strażak', 'sportowiec'),
     ('dorota', 'kuźniak', 'polska', 'papuga', 'mysz', 'nauczycielka'),
     ('michal', 'słowik', 'niemcy', 'wąż', 'programista', 'sportowiec'),
@@ -20,24 +20,42 @@ people =[
     ('niunia',)
 ]
 
-# print(people)
-# print(len(people))
-#
-# for item in people:
-#     print(len(item), end=' ')
-# print('.')
 
 
-for item in people:
-    if len(item) % 2 == 0:
-        print(len(item))
+numbers = [
+    (1,),
+    (1, 2, 3, 4),
+    (1, 2, 3, 4, 5),
+    (1, 2, 3, 4, 5),
+    (1, 2, 3, 4, 5, 6),
+    (1, 2, 3, 4, 5, 6),
+    (1, 2, 3, 4, 5, 6, 7, 8, 9,),
+    (1, 2, 3, 4, 5, 6, 7, 8, 9,),
+    (1, 2, 3, 4, 5, 6, 7, 8, 9,),
+    (1, 2, 3, 4, 5),
+    (1, 2, 3, 4, 5),
+    (1, 2, 3),
+    (1, 2, 3),
+    (1, 2, 3),
+    (1, 2, 3),
+    (1, 2, 3, 4, 5, 6),
+    (1, 2, 3, 4, 5, 6),
+    (1, 2, 3, 4, 5, 6),
+    (1, 2, 3, 4, 5,),
+    (1, 2, 3, 4, 5,),
+    (1, 2, 3, 4),
+    (1, 2, 3, 4),
+    (1, 2, 3, 4),
+]
 
+# even1 = [people for people in peoples if len(people) % 2 == 0]
+# print(even1)
+# print(len(even1))
+# odd2 = [people for people in peoples if len(people) % 2 != 0]
+# print(odd2)
+# print(len(odd2))
 
-
-    #     print(f"ilosc parzystych = {item.count(item)}")
-    # else:
-    #     print(len(item) / item.count(item))
-        # print(f"nieparzyste {(len(item) / item.count(item))}", end=' ')
-# print()
-
-# items = [len(item) if len(item) % 2 == 0 else (sum(item) / len(item)) for item in people if len(item) > 2 < 6]
+result = [sum(item) if len(item) % 2 == 0 else sum(item) / len(item) for item in numbers if 1 < len(item) < 6]
+# items = [sum(item) if len(item) % 2 == 0 else (sum(item) / len(item)) for item in peoples if len(item) > 2 if len(item) < 6]
+# print(items)
+print(result)
