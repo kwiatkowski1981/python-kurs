@@ -56,6 +56,6 @@ numbers = [
 # print(len(odd2))
 
 result = [sum(item) if len(item) % 2 == 0 else sum(item) / len(item) for item in numbers if 1 < len(item) < 6]
-# items = [sum(item) if len(item) % 2 == 0 else (sum(item) / len(item)) for item in peoples if len(item) > 2 if len(item) < 6]
-# print(items)
+items = [sum(item) if len(item) % 2 == 0 else (sum(item) / len(item)) for item in numbers if len(item) > 2 if len(item) < 6]
+print(items)
 print(result)
