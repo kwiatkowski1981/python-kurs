@@ -44,7 +44,7 @@ def test_count_letters_none():
 
 
 def test_count_letters_override():
-    assert count_letters('Python', '>', '<') == 0
+    assert count_letters('Python', '<', '>') == 0
 
 
 def test_multiple_brackets():
