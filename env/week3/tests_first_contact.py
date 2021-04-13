@@ -12,7 +12,7 @@ def test_add_numbers():
     assert value == 5
 
 
-def count_letters(text, start='(', end=')'):
+def count_letters(text, start='(', end=')') -> int:
     should_count = False
     counter = 0
     temp_counter = 0
@@ -32,7 +32,7 @@ def count_letters(text, start='(', end=')'):
 
 
 def test_barteks_idea():
-    assert count_letters('Samuraj (Programowania') == 0
+    assert count_letters('(Samuraj) (Programowania') == 7
 
 
 def test_count_letters_once():
