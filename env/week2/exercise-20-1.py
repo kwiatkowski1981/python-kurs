@@ -1,3 +1,4 @@
+
 div_by_3 = set(range(3, 1000, 3))
 print(div_by_3)
 
