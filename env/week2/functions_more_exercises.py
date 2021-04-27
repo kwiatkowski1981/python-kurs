@@ -37,7 +37,7 @@ def print_data(something: Union[int, str]):
     print(something)
 
 
-print_data('Kuba')
+print_data('Kuba')  # TODO something here
 print_data(123)
 print_data(True)
 
@@ -69,3 +69,5 @@ print(maluch)
 print(maluch[0])
 print(maluch[1])
 print(maluch[2])
+
+
