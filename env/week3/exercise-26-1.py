@@ -23,6 +23,7 @@ def upper_first_letters(names):
     return sorted_by_lastname
 
 
-print(list(upper_first_letters(people)))
+result_2 = list(upper_first_letters(people))
+print(result_2)
 
 
